@@ -1,0 +1,97 @@
+{
+  "id": "split_squat",
+  "name": "Split squat",
+  "primaryMuscle": "quads",
+  "secondaryMuscles": [
+    "glutes"
+  ],
+  "equipment": [
+    "none",
+    "dumbbell"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": true,
+  "summary": "Static lunge with both feet on the floor.",
+  "steps": [
+    "Take a long step: front foot flat, rear foot on the toes.",
+    "Lower straight down until the rear knee is close to the floor.",
+    "Push through the front foot to come up.",
+    "Finish all reps, then switch legs."
+  ],
+  "commonMistakes": [
+    "Front heel lifting.",
+    "Torso falling forward."
+  ],
+  "breathing": "Inhale down, exhale up.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Body weight",
+    "Body weight, 4 s down",
+    "Dumbbell",
+    "Dumbbell, pause 2 s"
+  ],
+  "easier": "Hold a support.",
+  "harder": "Add the dumbbell or a pause.",
+  "contraindications": [
+    "Knee pain."
+  ],
+  "alternatives": [
+    "bulgarian_split_squat"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "split_squat-start.svg",
+      "alt": "Standing in a long stance, rear foot on the toes."
+    },
+    "end": {
+      "file": "split_squat-end.svg",
+      "alt": "Bottom of a split squat, rear knee close to the floor."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 2,
+      "nearLeg": [
+        160,
+        188
+      ],
+      "farLeg": [
+        200,
+        195
+      ],
+      "farFoot": 150,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "torso": 4,
+      "nearLeg": [
+        96,
+        184
+      ],
+      "farLeg": [
+        188,
+        268
+      ],
+      "farFoot": 175,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "hip"
+    ]
+  }
+}

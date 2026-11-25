@@ -1,0 +1,116 @@
+{
+  "id": "dumbbell_row",
+  "name": "One-arm dumbbell row",
+  "primaryMuscle": "back",
+  "secondaryMuscles": [
+    "biceps",
+    "rear_delts"
+  ],
+  "equipment": [
+    "dumbbell",
+    "sofa"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Supported row; one hand on a sofa or chair.",
+  "steps": [
+    "Put one hand on a sofa or chair and hinge forward with a flat back.",
+    "Let the dumbbell hang under the shoulder.",
+    "Pull the elbow back toward the hip.",
+    "Lower with control until the arm is straight."
+  ],
+  "commonMistakes": [
+    "Twisting the torso to lift.",
+    "Pulling with the hand instead of the elbow."
+  ],
+  "breathing": "Exhale while pulling, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 3,
+    "pauseTopSec": 1,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Standard",
+    "4 s down",
+    "Pause 2 s at the top",
+    "Add band under the foot"
+  ],
+  "easier": "Shorter range.",
+  "harder": "Slower lowering, pause at the top or add a band.",
+  "contraindications": [
+    "Acute lower back pain."
+  ],
+  "alternatives": [
+    "band_row"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "dumbbell_row-start.svg",
+      "alt": "Hinged forward, one hand on a sofa, dumbbell hanging under the shoulder."
+    },
+    "end": {
+      "file": "dumbbell_row-end.svg",
+      "alt": "Hinged forward, elbow pulled back beside the torso."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 72,
+      "head": 80,
+      "nearArm": [
+        180,
+        180
+      ],
+      "farArm": [
+        155,
+        160
+      ],
+      "nearLeg": [
+        172,
+        188
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        },
+        {
+          "type": "box",
+          "at": "farHand",
+          "width": 36
+        }
+      ]
+    },
+    "end": {
+      "torso": 72,
+      "head": 80,
+      "nearArm": [
+        255,
+        175
+      ],
+      "farArm": [
+        155,
+        160
+      ],
+      "nearLeg": [
+        172,
+        188
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        },
+        {
+          "type": "box",
+          "at": "farHand",
+          "width": 36
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

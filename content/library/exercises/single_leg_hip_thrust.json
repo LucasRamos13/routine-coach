@@ -1,0 +1,112 @@
+{
+  "id": "single_leg_hip_thrust",
+  "name": "Single-leg hip thrust",
+  "primaryMuscle": "glutes",
+  "secondaryMuscles": [
+    "hamstrings"
+  ],
+  "equipment": [
+    "sofa",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": true,
+  "summary": "Hip extension with the upper back on a sofa; pause at the top.",
+  "steps": [
+    "Sit on the floor with the upper back against the edge of the sofa.",
+    "Plant one foot, knee bent, and lift the other leg.",
+    "Push through the heel to lift the hips until the body is straight from shoulders to knee.",
+    "Pause 1-2 s at the top, lower with control. Switch legs after the set."
+  ],
+  "commonMistakes": [
+    "Arching the lower back instead of extending the hips.",
+    "Pushing through the toes."
+  ],
+  "breathing": "Exhale while lifting, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseTopSec": 2,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Two legs",
+    "Single leg",
+    "Single leg + band",
+    "Single leg + band + dumbbell",
+    "Single leg, 3 s pause"
+  ],
+  "easier": "Both feet on the floor.",
+  "harder": "Band over the hips, dumbbell on the hip or a longer pause.",
+  "contraindications": [
+    "Lower back pain at the top: reduce the range."
+  ],
+  "alternatives": [
+    "glute_bridge"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "single_leg_hip_thrust-start.svg",
+      "alt": "Upper back on a sofa, hips low, one foot planted and the other leg raised."
+    },
+    "end": {
+      "file": "single_leg_hip_thrust-end.svg",
+      "alt": "Hips lifted level with the shoulders, body straight from shoulders to knee."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 58,
+      "head": 75,
+      "nearArm": [
+        95,
+        95
+      ],
+      "nearLeg": [
+        333,
+        190
+      ],
+      "farLeg": [
+        350,
+        300
+      ],
+      "props": [
+        {
+          "type": "box",
+          "at": "shoulder",
+          "width": 56,
+          "offset": 16
+        }
+      ]
+    },
+    "end": {
+      "torso": 90,
+      "head": 95,
+      "nearArm": [
+        95,
+        95
+      ],
+      "nearLeg": [
+        282,
+        178
+      ],
+      "farLeg": [
+        275,
+        275
+      ],
+      "props": [
+        {
+          "type": "box",
+          "at": "shoulder",
+          "width": 56,
+          "offset": 16
+        }
+      ]
+    },
+    "arrows": [
+      "hip"
+    ],
+    "anchor": "nearAnkle"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "phases": [
+    { "id": "ramp", "name": "Ramp-up", "weeks": 2, "sets": 2, "rirMin": 3, "rirMax": 4, "eccentricSec": 3, "autoProgression": false,
+      "notes": "Learn the movements. Stop 3 reps before failure." },
+    { "id": "build", "name": "Build", "weeks": 2, "sets": 3, "rirMin": 2, "rirMax": 3,
+      "notes": "Three sets, stop 2 reps before failure. Double progression starts." },
+    { "id": "main", "name": "Main", "sets": 3, "rirMin": 1, "rirMax": 2,
+      "notes": "Stop 1-2 reps before failure." }
+  ],
+  "deload": { "everyWeeks": 6, "setFactor": 0.5 },
+  "sessions": [
+    {
+      "id": "full_a", "name": "Full body A", "type": "strength", "durationMin": 30, "shortDurationMin": 20,
+      "description": "Push, pull, legs and core.",
+      "warmup": ["2 min marching or jumping jacks", "10 bodyweight squats", "10 arm circles each way"],
+      "blocks": [
+        { "id": "A", "restSec": 75, "items": [
+          { "exercise": "push_up", "range": [8, 20] },
+          { "exercise": "band_row", "range": [12, 20] } ] },
+        { "id": "B", "restSec": 75, "items": [
+          { "exercise": "split_squat", "range": [10, 20] },
+          { "exercise": "glute_bridge", "range": [12, 20] } ] },
+        { "id": "C", "restSec": 60, "items": [
+          { "exercise": "plank", "range": [30, 60], "sets": 2 } ] }
+      ],
+      "shortBlocks": ["A", "B"],
+      "stretches": { "exercises": ["chest_stretch", "hip_flexor_stretch", "hamstring_stretch"], "holdSec": 30, "rounds": 2 }
+    },
+    {
+      "id": "full_b", "name": "Full body B", "type": "strength", "durationMin": 30, "shortDurationMin": 20,
+      "description": "Press, hinge, arms and core.",
+      "warmup": ["2 min marching", "10 hip hinges", "10 band pull-aparts"],
+      "blocks": [
+        { "id": "A", "restSec": 75, "items": [
+          { "exercise": "overhead_press", "range": [10, 20] },
+          { "exercise": "romanian_deadlift", "range": [10, 15] } ] },
+        { "id": "B", "restSec": 75, "items": [
+          { "exercise": "dumbbell_row", "range": [10, 20] },
+          { "exercise": "calf_raise", "range": [15, 25] } ] },
+        { "id": "C", "restSec": 60, "items": [
+          { "exercise": "biceps_curl", "range": [12, 20] },
+          { "exercise": "dead_bug", "range": [8, 12], "sets": 2 } ] }
+      ],
+      "shortBlocks": ["A", "B"],
+      "stretches": { "exercises": ["lat_stretch", "calf_stretch", "glute_stretch"], "holdSec": 30, "rounds": 2 }
+    },
+    { "id": "walk", "name": "Walk", "type": "cardio", "durationMin": 30, "shortDurationMin": 20,
+      "description": "Easy walk at a pace where you can still talk." },
+    { "id": "mobility", "name": "Mobility", "type": "mobility", "durationMin": 15, "shortDurationMin": 10,
+      "description": "Gentle stretching for the whole body.",
+      "stretches": { "exercises": ["hip_flexor_stretch", "hamstring_stretch", "chest_stretch", "quad_stretch", "adductor_stretch"], "holdSec": 30, "rounds": 2 } }
+  ],
+  "week": {
+    "mon": ["full_a"], "tue": ["walk"], "wed": ["full_b"], "thu": ["walk"], "fri": ["full_a"], "sat": ["walk"], "sun": ["mobility"]
+  },
+  "timeWindows": {
+    "mon": ["07:00-08:00", "18:00-21:00"], "tue": ["18:00-21:00"], "wed": ["07:00-08:00", "18:00-21:00"],
+    "thu": ["18:00-21:00"], "fri": ["07:00-08:00", "18:00-21:00"], "sat": ["09:00-12:00"], "sun": ["09:00-12:00"]
+  },
+  "muscleTargets": { "chest": 6, "back": 9, "quads": 6, "glutes": 6, "hamstrings": 3, "shoulders": 3, "calves": 3, "biceps": 3, "core": 4 },
+  "recoverySession": "mobility",
+  "guide": [
+    { "title": "How hard", "items": ["Finish each set with the reps in reserve shown for the current phase.", "Lower in 2-3 s, lift in 1 s, no swinging."] },
+    { "title": "Safety", "items": ["Check bands for cracks before each use and anchor them well.", "Stop on sharp pain. Chest pain, dizziness or sharp pain: stop and seek medical help."] }
+  ]
+}

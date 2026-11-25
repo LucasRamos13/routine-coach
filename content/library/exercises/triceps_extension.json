@@ -1,0 +1,83 @@
+{
+  "id": "triceps_extension",
+  "name": "Overhead triceps extension",
+  "primaryMuscle": "triceps",
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Extension with the elbow overhead; keep the elbows still.",
+  "steps": [
+    "Hold the dumbbell with both hands over the head.",
+    "Keep the elbows pointing up and lower the weight behind the head.",
+    "Extend the elbows until the arms are straight.",
+    "Do not let the elbows flare out."
+  ],
+  "commonMistakes": [
+    "Elbows moving forward or out.",
+    "Arching the lower back."
+  ],
+  "breathing": "Inhale while lowering, exhale while extending.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Band pushdown grip",
+    "Dumbbell, two hands",
+    "Dumbbell, 4 s down",
+    "Dumbbell, one arm",
+    "Dumbbell, one arm, pause 2 s"
+  ],
+  "easier": "Use a band.",
+  "harder": "One arm or a slower lowering.",
+  "contraindications": [
+    "Elbow or shoulder pain overhead."
+  ],
+  "alternatives": [
+    "band_pushdown"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "triceps_extension-start.svg",
+      "alt": "Standing, elbows pointing up, dumbbell lowered behind the head."
+    },
+    "end": {
+      "file": "triceps_extension-end.svg",
+      "alt": "Standing, arms straight overhead holding the dumbbell."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        12,
+        200
+      ],
+      "head": 5,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        6,
+        3
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

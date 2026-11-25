@@ -1,0 +1,88 @@
+{
+  "id": "glute_bridge",
+  "name": "Glute bridge",
+  "primaryMuscle": "glutes",
+  "secondaryMuscles": [
+    "hamstrings"
+  ],
+  "equipment": [
+    "none",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Hip lift lying on the floor.",
+  "steps": [
+    "Lie on your back, knees bent, feet flat near the hips.",
+    "Push through the heels to lift the hips.",
+    "Squeeze the glutes at the top for 1-2 s.",
+    "Lower slowly."
+  ],
+  "commonMistakes": [
+    "Arching the lower back.",
+    "Feet too far from the hips."
+  ],
+  "breathing": "Exhale up, inhale down.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseTopSec": 2,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Two legs",
+    "Two legs + band",
+    "Single leg",
+    "Single leg + band"
+  ],
+  "easier": "Smaller range.",
+  "harder": "Single leg or a band over the hips.",
+  "contraindications": [
+    "Lower back pain."
+  ],
+  "alternatives": [
+    "single_leg_hip_thrust"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "glute_bridge-start.svg",
+      "alt": "Lying on the back with knees bent and feet flat."
+    },
+    "end": {
+      "file": "glute_bridge-end.svg",
+      "alt": "Hips lifted, body straight from shoulders to knees."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        268,
+        268
+      ],
+      "nearLeg": [
+        330,
+        186
+      ],
+      "nearFoot": 270
+    },
+    "end": {
+      "torso": 113,
+      "head": 100,
+      "nearArm": [
+        262,
+        268
+      ],
+      "nearLeg": [
+        290,
+        184
+      ],
+      "nearFoot": 270
+    },
+    "arrows": [
+      "hip"
+    ],
+    "anchor": "shoulder"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "bulgarian_split_squat",
+  "name": "Bulgarian split squat",
+  "primaryMuscle": "quads",
+  "secondaryMuscles": [
+    "glutes",
+    "adductors"
+  ],
+  "equipment": [
+    "sofa",
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": true,
+  "summary": "Single-leg squat with the rear foot on a sofa; the main leg exercise when the load is light.",
+  "steps": [
+    "Stand about a long step in front of the sofa and put the top of the rear foot on it.",
+    "Hold the dumbbell at the side (or a band under the front foot).",
+    "Lower straight down until the front thigh is about parallel to the floor.",
+    "Drive through the whole front foot to stand up. Finish all reps, then switch legs."
+  ],
+  "commonMistakes": [
+    "Front heel lifting.",
+    "Knee collapsing inward.",
+    "Pushing off with the rear leg."
+  ],
+  "breathing": "Inhale on the way down, exhale while standing up.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Body weight",
+    "Body weight, 4 s down",
+    "Dumbbell",
+    "Dumbbell, 4 s down",
+    "Dumbbell + band",
+    "Dumbbell + band, pause 2 s"
+  ],
+  "easier": "Split squat with both feet on the floor, or hold a support.",
+  "harder": "Add load, slow down or pause at the bottom.",
+  "contraindications": [
+    "Knee pain that gets worse during the set."
+  ],
+  "alternatives": [
+    "split_squat"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "bulgarian_split_squat-start.svg",
+      "alt": "Standing tall with the rear foot on a sofa and a dumbbell at the side."
+    },
+    "end": {
+      "file": "bulgarian_split_squat-end.svg",
+      "alt": "Bottom of the split squat: front thigh near parallel, rear knee close to the floor."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 4,
+      "nearLeg": [
+        152,
+        190
+      ],
+      "farLeg": [
+        205,
+        280
+      ],
+      "farFoot": 272,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        },
+        {
+          "type": "box",
+          "at": "farAnkle",
+          "width": 44,
+          "offset": -14
+        }
+      ]
+    },
+    "end": {
+      "torso": 10,
+      "nearLeg": [
+        96,
+        186
+      ],
+      "farLeg": [
+        208,
+        330
+      ],
+      "farFoot": 272,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        },
+        {
+          "type": "box",
+          "at": "farAnkle",
+          "width": 44,
+          "offset": -14
+        }
+      ]
+    },
+    "arrows": [
+      "hip"
+    ]
+  }
+}

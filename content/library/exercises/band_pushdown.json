@@ -1,0 +1,103 @@
+{
+  "id": "band_pushdown",
+  "name": "Band triceps pushdown",
+  "primaryMuscle": "triceps",
+  "equipment": [
+    "band",
+    "door"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Pushdown with the band anchored high on a door.",
+  "steps": [
+    "Anchor the band high on a door.",
+    "Elbows by the sides, forearms up.",
+    "Push down until the arms are straight.",
+    "Return slowly, elbows still."
+  ],
+  "commonMistakes": [
+    "Elbows drifting forward.",
+    "Leaning on the band."
+  ],
+  "breathing": "Exhale while pushing, inhale while returning.",
+  "cadence": {
+    "eccentricSec": 2,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Light band",
+    "Medium band",
+    "Medium band, 2 s squeeze",
+    "Heavy band"
+  ],
+  "easier": "Lighter band.",
+  "harder": "Stronger band or a squeeze at the bottom.",
+  "contraindications": [
+    "Elbow pain."
+  ],
+  "alternatives": [
+    "triceps_extension"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "band_pushdown-start.svg",
+      "alt": "Standing, elbows by the sides, forearms up holding a band anchored above."
+    },
+    "end": {
+      "file": "band_pushdown-end.svg",
+      "alt": "Standing, arms straight down pushing the band."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        178,
+        40
+      ],
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "toPoint": [
+            180,
+            18
+          ]
+        },
+        {
+          "type": "wall",
+          "toPoint": [
+            184,
+            0
+          ]
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        178,
+        165
+      ],
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "toPoint": [
+            180,
+            18
+          ]
+        },
+        {
+          "type": "wall",
+          "toPoint": [
+            184,
+            0
+          ]
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

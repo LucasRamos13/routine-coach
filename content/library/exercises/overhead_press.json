@@ -1,0 +1,88 @@
+{
+  "id": "overhead_press",
+  "name": "Overhead press",
+  "primaryMuscle": "shoulders",
+  "secondaryMuscles": [
+    "triceps",
+    "core"
+  ],
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": false,
+  "summary": "Vertical press standing on a band or with the dumbbell, alternating arms.",
+  "steps": [
+    "Stand tall, feet hip-width, on the band (or hold the dumbbell at the shoulder).",
+    "Brace the abs and squeeze the glutes.",
+    "Press straight up until the arm is fully extended next to the ear.",
+    "Lower to shoulder height with control."
+  ],
+  "commonMistakes": [
+    "Arching the lower back.",
+    "Pressing forward instead of up."
+  ],
+  "breathing": "Exhale while pressing, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 2,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Light band",
+    "Dumbbell, alternating",
+    "Medium band",
+    "Dumbbell, 4 s down",
+    "Heavy band",
+    "Band + dumbbell"
+  ],
+  "easier": "Lighter band or seated.",
+  "harder": "Stronger band, slower lowering or one arm at a time with a pause.",
+  "contraindications": [
+    "Shoulder pain when raising the arm overhead."
+  ],
+  "alternatives": [
+    "front_raise"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "overhead_press-start.svg",
+      "alt": "Standing, dumbbell at shoulder height, elbow under the hand."
+    },
+    "end": {
+      "file": "overhead_press-end.svg",
+      "alt": "Standing, arm fully extended overhead."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        165,
+        15
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        4,
+        0
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

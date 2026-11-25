@@ -1,0 +1,103 @@
+{
+  "id": "band_row",
+  "name": "Seated band row",
+  "primaryMuscle": "back",
+  "secondaryMuscles": [
+    "biceps",
+    "rear_delts"
+  ],
+  "equipment": [
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Horizontal pull with a band looped around the feet or anchored in a door.",
+  "steps": [
+    "Sit with legs straight and loop the band around the soles of the feet.",
+    "Sit tall, arms straight in front, slight tension on the band.",
+    "Pull the hands to the lower ribs, elbows close to the body, squeezing the shoulder blades.",
+    "Return slowly until the arms are straight."
+  ],
+  "commonMistakes": [
+    "Leaning far back to move the band.",
+    "Shrugging the shoulders.",
+    "Letting the band snap back."
+  ],
+  "breathing": "Exhale while pulling, inhale while returning.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseTopSec": 1,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Light band",
+    "Light band, 1 s squeeze",
+    "Medium band",
+    "Medium band, 1 s squeeze",
+    "Heavy band",
+    "Doubled band"
+  ],
+  "easier": "Lighter band or less pre-tension.",
+  "harder": "Stronger or doubled band, more pre-tension, 1-2 s squeeze.",
+  "contraindications": [
+    "Lower back pain when sitting: sit on a cushion or use a door anchor while standing."
+  ],
+  "alternatives": [
+    "dumbbell_row"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "band_row-start.svg",
+      "alt": "Seated, legs straight, arms reaching forward holding a band looped around the feet."
+    },
+    "end": {
+      "file": "band_row-end.svg",
+      "alt": "Seated upright, hands pulled to the ribs, elbows behind the body."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 12,
+      "nearArm": [
+        118,
+        100
+      ],
+      "nearLeg": [
+        90,
+        90
+      ],
+      "nearFoot": 0,
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "to": "nearToe"
+        }
+      ]
+    },
+    "end": {
+      "torso": 356,
+      "nearArm": [
+        200,
+        88
+      ],
+      "nearLeg": [
+        90,
+        90
+      ],
+      "nearFoot": 0,
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "to": "nearToe"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ],
+    "anchor": "hip"
+  }
+}

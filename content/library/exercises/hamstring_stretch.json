@@ -1,0 +1,91 @@
+{
+  "id": "hamstring_stretch",
+  "name": "Lying hamstring stretch",
+  "primaryMuscle": "hamstrings",
+  "equipment": [
+    "band"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Lying leg raise held with a band.",
+  "steps": [
+    "Lie on your back and loop a band around one foot.",
+    "Keep the knee almost straight and raise the leg.",
+    "Pull gently until you feel a stretch behind the thigh.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "hamstring_stretch-start.svg",
+      "alt": "Lying on the back, one leg raised halfway with a band around the foot."
+    },
+    "end": {
+      "file": "hamstring_stretch-end.svg",
+      "alt": "Lying on the back, the leg raised close to vertical."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        338,
+        320
+      ],
+      "nearLeg": [
+        318,
+        318
+      ],
+      "farLeg": [
+        270,
+        270
+      ],
+      "farFoot": 0,
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "to": "nearToe"
+        }
+      ]
+    },
+    "end": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        345,
+        330
+      ],
+      "nearLeg": [
+        350,
+        350
+      ],
+      "farLeg": [
+        270,
+        270
+      ],
+      "farFoot": 0,
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "to": "nearToe"
+        }
+      ]
+    },
+    "arrows": [
+      "nearAnkle"
+    ],
+    "anchor": "hip"
+  }
+}

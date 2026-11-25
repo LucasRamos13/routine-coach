@@ -1,0 +1,135 @@
+{
+  "id": "single_leg_calf_raise",
+  "name": "Single-leg calf raise",
+  "primaryMuscle": "calves",
+  "equipment": [
+    "step",
+    "dumbbell"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": true,
+  "summary": "Calf raise on a step through the full range, with a pause at the bottom.",
+  "steps": [
+    "Stand on one foot with the ball of the foot on a step, holding a wall for balance.",
+    "Let the heel drop below the step and pause 1 s in the stretch.",
+    "Rise as high as possible on the toes.",
+    "Lower slowly. Switch legs after the set."
+  ],
+  "commonMistakes": [
+    "Bouncing at the bottom.",
+    "Short range."
+  ],
+  "breathing": "Exhale up, inhale down.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseBottomSec": 1,
+    "concentricSec": 1,
+    "pauseTopSec": 1
+  },
+  "ladder": [
+    "Two legs on a step",
+    "Single leg",
+    "Single leg + dumbbell",
+    "Single leg + dumbbell, 3 s down"
+  ],
+  "easier": "Two feet.",
+  "harder": "Hold the dumbbell or slow down.",
+  "contraindications": [
+    "Achilles pain."
+  ],
+  "alternatives": [
+    "calf_raise"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "single_leg_calf_raise-start.svg",
+      "alt": "Standing on one foot on a step with the heel dropped below it, hand on a wall."
+    },
+    "end": {
+      "file": "single_leg_calf_raise-end.svg",
+      "alt": "Standing on one foot on the step, heel raised high on the toes."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        125,
+        90
+      ],
+      "farArm": [
+        180,
+        180
+      ],
+      "nearLeg": [
+        180,
+        180
+      ],
+      "farLeg": [
+        178,
+        255
+      ],
+      "nearFoot": 72,
+      "props": [
+        {
+          "type": "box",
+          "at": "nearToe",
+          "height": 16,
+          "width": 34,
+          "offset": 6
+        },
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 5
+        },
+        {
+          "type": "dumbbell",
+          "at": "farHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        130,
+        85
+      ],
+      "farArm": [
+        180,
+        180
+      ],
+      "nearLeg": [
+        180,
+        180
+      ],
+      "farLeg": [
+        178,
+        255
+      ],
+      "nearFoot": 145,
+      "props": [
+        {
+          "type": "box",
+          "at": "nearToe",
+          "height": 16,
+          "width": 34,
+          "offset": 6
+        },
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 5
+        },
+        {
+          "type": "dumbbell",
+          "at": "farHand"
+        }
+      ]
+    },
+    "arrows": [
+      "head"
+    ],
+    "anchor": "nearToe"
+  }
+}

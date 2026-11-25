@@ -1,0 +1,100 @@
+{
+  "id": "floor_press",
+  "name": "Dumbbell floor press",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+    "triceps",
+    "shoulders"
+  ],
+  "equipment": [
+    "dumbbell"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Lying press with the floor limiting the range; friendly to the shoulders.",
+  "steps": [
+    "Lie on your back with knees bent and feet flat.",
+    "Hold the dumbbell over the chest with a straight arm.",
+    "Lower until the upper arm touches the floor, elbow about 45° from the body.",
+    "Press back up to a straight arm."
+  ],
+  "commonMistakes": [
+    "Bouncing the elbow off the floor.",
+    "Arching the lower back."
+  ],
+  "breathing": "Inhale while lowering, exhale while pressing.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseBottomSec": 1,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Two hands",
+    "One arm",
+    "One arm, 4 s down",
+    "One arm, pause 2 s"
+  ],
+  "easier": "Use both hands on the dumbbell.",
+  "harder": "One arm with a slow lowering and a pause.",
+  "contraindications": [
+    "Acute shoulder pain."
+  ],
+  "alternatives": [
+    "push_up"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "floor_press-start.svg",
+      "alt": "Lying on the back, elbow on the floor, dumbbell above the shoulder."
+    },
+    "end": {
+      "file": "floor_press-end.svg",
+      "alt": "Lying on the back, arm straight above the chest holding the dumbbell."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        262,
+        0
+      ],
+      "nearLeg": [
+        330,
+        185
+      ],
+      "nearFoot": 270,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        0,
+        0
+      ],
+      "nearLeg": [
+        330,
+        185
+      ],
+      "nearFoot": 270,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ],
+    "anchor": "hip"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "hammer_curl",
+  "name": "Hammer curl",
+  "primaryMuscle": "biceps",
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Curl with the palm facing the body; easier on the elbow.",
+  "steps": [
+    "Stand tall with the arm straight by the side.",
+    "Keep the elbow pinned to the body and curl the weight up.",
+    "Squeeze at the top.",
+    "Lower slowly (3 s) to a straight arm."
+  ],
+  "commonMistakes": [
+    "Swinging the torso.",
+    "Elbow drifting forward.",
+    "Dropping the weight quickly."
+  ],
+  "breathing": "Exhale while curling, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Band",
+    "Dumbbell",
+    "Dumbbell, 4 s down",
+    "Dumbbell, pause 2 s halfway"
+  ],
+  "easier": "Lighter band.",
+  "harder": "Slower lowering.",
+  "contraindications": [
+    "Elbow pain."
+  ],
+  "alternatives": [
+    "biceps_curl"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "hammer_curl-start.svg",
+      "alt": "Standing, arm straight by the side, palm facing the body."
+    },
+    "end": {
+      "file": "hammer_curl-end.svg",
+      "alt": "Standing, elbow bent, dumbbell raised to the shoulder."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        178,
+        178
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        176,
+        25
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

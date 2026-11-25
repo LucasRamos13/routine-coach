@@ -1,0 +1,88 @@
+{
+  "id": "dead_bug",
+  "name": "Dead bug",
+  "primaryMuscle": "core",
+  "equipment": [
+    "none"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Lying core exercise; lower back stays on the floor.",
+  "steps": [
+    "Lie on your back, arms up, hips and knees bent at 90°.",
+    "Press the lower back into the floor.",
+    "Slowly extend one arm overhead and the opposite leg toward the floor.",
+    "Return and switch sides."
+  ],
+  "commonMistakes": [
+    "Lower back arching off the floor.",
+    "Moving fast."
+  ],
+  "breathing": "Exhale while extending.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 2
+  },
+  "ladder": [
+    "Legs only",
+    "Opposite arm and leg",
+    "Slow, 4 s",
+    "Holding a band overhead"
+  ],
+  "easier": "Move only the legs.",
+  "harder": "Slower or with a band.",
+  "contraindications": [],
+  "alternatives": [
+    "plank"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "dead_bug-start.svg",
+      "alt": "Lying on the back, arms up, hips and knees bent at 90°."
+    },
+    "end": {
+      "file": "dead_bug-end.svg",
+      "alt": "One arm extended overhead and the opposite leg extended near the floor."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        2,
+        2
+      ],
+      "nearLeg": [
+        2,
+        272
+      ]
+    },
+    "end": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        88,
+        92
+      ],
+      "farArm": [
+        2,
+        2
+      ],
+      "nearLeg": [
+        2,
+        272
+      ],
+      "farLeg": [
+        262,
+        266
+      ]
+    },
+    "arrows": [
+      "nearHand",
+      "farAnkle"
+    ],
+    "anchor": "hip"
+  }
+}

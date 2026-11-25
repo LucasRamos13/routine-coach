@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Stick figure pressing a dumbbell overhead. -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:strokeLineCap="round"
+        android:pathData="M54,44 L54,66 M54,66 L46,82 M54,66 L62,82 M54,48 L44,38 L44,28 M54,48 L64,38 L64,28" />
+    <path android:fillColor="#FFFFFF" android:pathData="M54,33m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+    <path android:strokeColor="#FFB74D" android:strokeWidth="4" android:strokeLineCap="round"
+        android:pathData="M36,26 L72,26" />
+    <path android:fillColor="#FFB74D" android:pathData="M33,20h6v12h-6z M69,20h6v12h-6z" />
+</vector>

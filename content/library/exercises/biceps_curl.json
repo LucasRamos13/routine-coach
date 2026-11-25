@@ -1,0 +1,83 @@
+{
+  "id": "biceps_curl",
+  "name": "Biceps curl",
+  "primaryMuscle": "biceps",
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Slow curl with a dumbbell or band.",
+  "steps": [
+    "Stand tall with the arm straight by the side.",
+    "Keep the elbow pinned to the body and curl the weight up.",
+    "Squeeze at the top.",
+    "Lower slowly (3 s) to a straight arm."
+  ],
+  "commonMistakes": [
+    "Swinging the torso.",
+    "Elbow drifting forward.",
+    "Dropping the weight quickly."
+  ],
+  "breathing": "Exhale while curling, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Band",
+    "Dumbbell",
+    "Dumbbell, 4 s down",
+    "Band + dumbbell",
+    "Dumbbell, pause 2 s halfway"
+  ],
+  "easier": "Lighter band.",
+  "harder": "Slower lowering, a pause halfway, or band and dumbbell together.",
+  "contraindications": [
+    "Elbow pain."
+  ],
+  "alternatives": [
+    "hammer_curl"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "biceps_curl-start.svg",
+      "alt": "Standing, arm straight by the side holding a dumbbell."
+    },
+    "end": {
+      "file": "biceps_curl-end.svg",
+      "alt": "Standing, elbow bent, dumbbell curled to the shoulder."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        178,
+        178
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        176,
+        25
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

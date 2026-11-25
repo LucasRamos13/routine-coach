@@ -1,0 +1,83 @@
+{
+  "id": "romanian_deadlift",
+  "name": "Romanian deadlift",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+    "glutes",
+    "back"
+  ],
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Two-leg hip hinge.",
+  "steps": [
+    "Stand with feet hip-width, dumbbell in front of the thighs.",
+    "Push the hips back with a soft knee and a flat back.",
+    "Lower until you feel the hamstrings stretch.",
+    "Drive the hips forward to stand up."
+  ],
+  "commonMistakes": [
+    "Rounding the back.",
+    "Squatting instead of hinging."
+  ],
+  "breathing": "Inhale down, exhale up.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Dumbbell",
+    "Dumbbell, 4 s down",
+    "Dumbbell + band",
+    "Pause 2 s at the bottom"
+  ],
+  "easier": "Shorter range.",
+  "harder": "Band under the feet or a pause.",
+  "contraindications": [
+    "Acute lower back pain."
+  ],
+  "alternatives": [
+    "single_leg_rdl"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "romanian_deadlift-start.svg",
+      "alt": "Standing tall holding a dumbbell."
+    },
+    "end": {
+      "file": "romanian_deadlift-end.svg",
+      "alt": "Hinged forward with a flat back and soft knees."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "torso": 76,
+      "head": 84,
+      "nearLeg": [
+        168,
+        190
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "shoulder"
+    ]
+  }
+}

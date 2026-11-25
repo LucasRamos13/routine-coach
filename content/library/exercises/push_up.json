@@ -1,0 +1,92 @@
+{
+  "id": "push_up",
+  "name": "Push-up",
+  "primaryMuscle": "chest",
+  "secondaryMuscles": [
+    "triceps",
+    "shoulders",
+    "core"
+  ],
+  "equipment": [
+    "none"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Horizontal press with body weight; pick the variation where you fail between 8 and 20 reps.",
+  "steps": [
+    "Place hands slightly wider than shoulders, fingers forward.",
+    "Brace abs and glutes so the body is a straight line from head to heels.",
+    "Lower the chest between the hands, elbows about 45° from the body.",
+    "Push the floor away until the arms are straight, without letting the hips sag."
+  ],
+  "commonMistakes": [
+    "Hips sagging or piking up.",
+    "Elbows flared to 90°.",
+    "Half reps that stop far from the floor."
+  ],
+  "breathing": "Inhale on the way down, exhale while pushing up.",
+  "cadence": {
+    "eccentricSec": 2,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Hands elevated",
+    "Knees on the floor",
+    "Standard",
+    "Standard, 4 s down",
+    "Feet elevated",
+    "Feet elevated, 4 s down"
+  ],
+  "easier": "Hands on a sofa or table, or knees on the floor.",
+  "harder": "Feet elevated, slower lowering or a pause at the bottom.",
+  "contraindications": [
+    "Wrist pain: use fists or push-up handles.",
+    "Acute shoulder pain."
+  ],
+  "alternatives": [
+    "floor_press"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "push_up-start.svg",
+      "alt": "Top of a push-up: straight arms under the shoulders, body in a straight line."
+    },
+    "end": {
+      "file": "push_up-end.svg",
+      "alt": "Bottom of a push-up: chest close to the floor, elbows bent back."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 68,
+      "head": 72,
+      "nearArm": [
+        180,
+        180
+      ],
+      "nearLeg": [
+        248,
+        248
+      ],
+      "nearFoot": 170
+    },
+    "end": {
+      "torso": 86,
+      "head": 88,
+      "nearArm": [
+        292,
+        180
+      ],
+      "nearLeg": [
+        266,
+        266
+      ],
+      "nearFoot": 180
+    },
+    "arrows": [
+      "shoulder"
+    ],
+    "anchor": "nearToe"
+  }
+}

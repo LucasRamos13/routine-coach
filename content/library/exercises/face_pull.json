@@ -1,0 +1,108 @@
+{
+  "id": "face_pull",
+  "name": "Band face pull",
+  "primaryMuscle": "rear_delts",
+  "secondaryMuscles": [
+    "back"
+  ],
+  "equipment": [
+    "band",
+    "door"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "High pull toward the face for the rear shoulders and upper back.",
+  "steps": [
+    "Anchor the band at face height (door anchor) and step back.",
+    "Start with straight arms in front, palms facing down.",
+    "Pull toward the face with the elbows high, separating the hands.",
+    "Return slowly."
+  ],
+  "commonMistakes": [
+    "Dropping the elbows.",
+    "Leaning back to pull."
+  ],
+  "breathing": "Exhale while pulling, inhale while returning.",
+  "cadence": {
+    "eccentricSec": 2,
+    "pauseTopSec": 1,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Light band",
+    "Light band, 2 s squeeze",
+    "Medium band",
+    "Medium band, 2 s squeeze",
+    "Heavy band"
+  ],
+  "easier": "Lighter band or step closer to the anchor.",
+  "harder": "Stronger band or a longer squeeze.",
+  "contraindications": [
+    "Make sure the anchor is secure so the band cannot snap toward the face."
+  ],
+  "alternatives": [
+    "band_row"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "face_pull-start.svg",
+      "alt": "Standing, arms straight forward at shoulder height holding a band anchored in front."
+    },
+    "end": {
+      "file": "face_pull-end.svg",
+      "alt": "Standing, hands pulled beside the face with elbows high."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        92,
+        92
+      ],
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "toPoint": [
+            192,
+            66
+          ]
+        },
+        {
+          "type": "wall",
+          "toPoint": [
+            194,
+            0
+          ]
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        278,
+        30
+      ],
+      "props": [
+        {
+          "type": "band",
+          "at": "nearHand",
+          "toPoint": [
+            192,
+            66
+          ]
+        },
+        {
+          "type": "wall",
+          "toPoint": [
+            194,
+            0
+          ]
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

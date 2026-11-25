@@ -1,0 +1,79 @@
+{
+  "id": "plank",
+  "name": "Plank",
+  "primaryMuscle": "core",
+  "equipment": [
+    "none"
+  ],
+  "category": "strength",
+  "mode": "time",
+  "summary": "Forearm plank; keep a straight line and breathe.",
+  "steps": [
+    "Forearms on the floor, elbows under the shoulders.",
+    "Step the feet back and lift the knees.",
+    "Squeeze glutes and abs; body straight from head to heels.",
+    "Hold while breathing calmly."
+  ],
+  "commonMistakes": [
+    "Hips sagging.",
+    "Holding the breath."
+  ],
+  "breathing": "Breathe slowly through the hold.",
+  "ladder": [
+    "Knees on the floor",
+    "Standard",
+    "Feet together, long lever",
+    "Lift one foot"
+  ],
+  "easier": "Knees on the floor.",
+  "harder": "Arms further forward or lift one foot.",
+  "contraindications": [
+    "Lower back pain: shorten the hold."
+  ],
+  "alternatives": [
+    "dead_bug"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "plank-start.svg",
+      "alt": "Forearm plank set-up with knees on the floor."
+    },
+    "end": {
+      "file": "plank-end.svg",
+      "alt": "Forearm plank: knees lifted, body straight from head to heels."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 75,
+      "head": 80,
+      "nearArm": [
+        180,
+        90
+      ],
+      "nearLeg": [
+        235,
+        270
+      ],
+      "nearFoot": 180
+    },
+    "end": {
+      "torso": 80,
+      "head": 82,
+      "nearArm": [
+        180,
+        90
+      ],
+      "nearLeg": [
+        258,
+        258
+      ],
+      "nearFoot": 170
+    },
+    "arrows": [
+      "nearKnee"
+    ],
+    "anchor": "nearElbow"
+  }
+}

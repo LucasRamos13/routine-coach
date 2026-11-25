@@ -1,0 +1,74 @@
+{
+  "id": "hip_flexor_stretch",
+  "name": "Hip flexor stretch",
+  "primaryMuscle": "hip_flexors",
+  "equipment": [
+    "none"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Half-kneeling lunge stretch.",
+  "steps": [
+    "Kneel on one knee with the other foot flat in front.",
+    "Tuck the pelvis and squeeze the glute of the kneeling leg.",
+    "Shift the hips forward until you feel a stretch in the front of the hip.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "hip_flexor_stretch-start.svg",
+      "alt": "Half-kneeling, torso upright."
+    },
+    "end": {
+      "file": "hip_flexor_stretch-end.svg",
+      "alt": "Half-kneeling with the hips shifted forward."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        175,
+        160
+      ],
+      "nearLeg": [
+        92,
+        182
+      ],
+      "farLeg": [
+        200,
+        272
+      ],
+      "farFoot": 272
+    },
+    "end": {
+      "torso": 356,
+      "nearArm": [
+        175,
+        160
+      ],
+      "nearLeg": [
+        75,
+        192
+      ],
+      "farLeg": [
+        218,
+        272
+      ],
+      "farFoot": 272
+    },
+    "arrows": [
+      "hip"
+    ],
+    "anchor": "nearAnkle"
+  }
+}

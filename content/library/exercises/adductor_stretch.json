@@ -1,0 +1,67 @@
+{
+  "id": "adductor_stretch",
+  "name": "Butterfly stretch",
+  "primaryMuscle": "adductors",
+  "equipment": [
+    "none"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": false,
+  "summary": "Seated with the soles of the feet together.",
+  "steps": [
+    "Sit tall with the soles of the feet together.",
+    "Hold the feet and let the knees drop.",
+    "Lean forward from the hips with a long back.",
+    "Hold."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "adductor_stretch-start.svg",
+      "alt": "Seated upright, soles together, knees out."
+    },
+    "end": {
+      "file": "adductor_stretch-end.svg",
+      "alt": "Leaning forward from the hips over the feet."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        160,
+        140
+      ],
+      "nearLeg": [
+        70,
+        250
+      ],
+      "nearFoot": 90
+    },
+    "end": {
+      "torso": 38,
+      "head": 55,
+      "nearArm": [
+        140,
+        150
+      ],
+      "nearLeg": [
+        70,
+        250
+      ],
+      "nearFoot": 90
+    },
+    "arrows": [
+      "shoulder"
+    ],
+    "anchor": "hip"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "front_raise",
+  "name": "Front raise",
+  "primaryMuscle": "shoulders",
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Shoulder raise with a light load; useful when pressing overhead hurts.",
+  "steps": [
+    "Stand tall with the dumbbell in front of the thigh.",
+    "Raise the straight arm forward to shoulder height.",
+    "Pause briefly and lower slowly."
+  ],
+  "commonMistakes": [
+    "Swinging the body.",
+    "Raising above shoulder height when it hurts."
+  ],
+  "breathing": "Exhale while raising, inhale while lowering.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Light band",
+    "Dumbbell",
+    "Dumbbell, pause 2 s",
+    "Heavy band"
+  ],
+  "easier": "Lighter band.",
+  "harder": "Pause at the top.",
+  "contraindications": [
+    "Shoulder pain."
+  ],
+  "alternatives": [
+    "overhead_press"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "front_raise-start.svg",
+      "alt": "Standing, dumbbell held in front of the thigh."
+    },
+    "end": {
+      "file": "front_raise-end.svg",
+      "alt": "Standing, straight arm raised forward to shoulder height."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        175,
+        175
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        90,
+        90
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "nearHand"
+    ]
+  }
+}

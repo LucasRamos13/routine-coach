@@ -1,0 +1,89 @@
+{
+  "id": "calf_stretch",
+  "name": "Wall calf stretch",
+  "primaryMuscle": "calves",
+  "equipment": [
+    "wall"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Lunge against a wall with the rear heel down.",
+  "steps": [
+    "Hands on a wall, one foot back.",
+    "Keep the rear knee straight and the heel on the floor.",
+    "Lean forward until you feel the stretch in the calf.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "calf_stretch-start.svg",
+      "alt": "Hands on a wall, rear leg straight with the heel down."
+    },
+    "end": {
+      "file": "calf_stretch-end.svg",
+      "alt": "Leaning further toward the wall."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 18,
+      "nearArm": [
+        62,
+        70
+      ],
+      "nearLeg": [
+        160,
+        188
+      ],
+      "farLeg": [
+        212,
+        212
+      ],
+      "farFoot": 95,
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 4
+        }
+      ]
+    },
+    "end": {
+      "torso": 28,
+      "nearArm": [
+        68,
+        74
+      ],
+      "nearLeg": [
+        148,
+        198
+      ],
+      "farLeg": [
+        220,
+        220
+      ],
+      "farFoot": 95,
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 4
+        }
+      ]
+    },
+    "arrows": [
+      "hip"
+    ],
+    "anchor": "nearToe"
+  }
+}

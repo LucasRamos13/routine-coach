@@ -1,0 +1,31 @@
+# Build
+.gradle/
+build/
+*/build/
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Local machine and secrets — never commit
+local.properties
+*.env
+!*.env.example
+*.jks
+*.keystore
+.private-patterns
+
+# Personal content and data — never commit
+private-pack/
+*.rcbackup
+*.db
+*.pdf
+
+# Python
+__pycache__/
+*.pyc

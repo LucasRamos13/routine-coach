@@ -1,0 +1,98 @@
+{
+  "id": "sliding_leg_curl",
+  "name": "Sliding leg curl",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+    "glutes"
+  ],
+  "equipment": [
+    "towel"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Hamstring curl lying down with the heels on a towel; slow on the way out.",
+  "steps": [
+    "Lie on your back with the heels on a towel on a smooth floor.",
+    "Lift the hips into a bridge.",
+    "Pull the heels toward the hips, keeping the hips up.",
+    "Slide the heels out slowly (3 s) until the legs are almost straight."
+  ],
+  "commonMistakes": [
+    "Dropping the hips.",
+    "Sliding out fast."
+  ],
+  "breathing": "Exhale while curling, inhale while sliding out.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Eccentric only",
+    "Two legs",
+    "Two legs, 4 s out",
+    "Single leg"
+  ],
+  "easier": "Only slide out slowly, then walk the feet back.",
+  "harder": "One leg at a time.",
+  "contraindications": [
+    "Hamstring cramps: reduce the range."
+  ],
+  "alternatives": [
+    "glute_bridge"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "sliding_leg_curl-start.svg",
+      "alt": "Lying on the back, hips lifted, legs almost straight with heels on a towel."
+    },
+    "end": {
+      "file": "sliding_leg_curl-end.svg",
+      "alt": "Hips lifted, heels pulled toward the hips on the towel."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 110,
+      "head": 100,
+      "nearArm": [
+        262,
+        268
+      ],
+      "nearLeg": [
+        258,
+        258
+      ],
+      "nearFoot": 330,
+      "props": [
+        {
+          "type": "towel",
+          "at": "nearAnkle"
+        }
+      ]
+    },
+    "end": {
+      "torso": 115,
+      "head": 100,
+      "nearArm": [
+        262,
+        268
+      ],
+      "nearLeg": [
+        292,
+        186
+      ],
+      "nearFoot": 330,
+      "props": [
+        {
+          "type": "towel",
+          "at": "nearAnkle"
+        }
+      ]
+    },
+    "arrows": [
+      "nearAnkle"
+    ],
+    "anchor": "shoulder"
+  }
+}

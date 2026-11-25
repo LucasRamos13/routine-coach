@@ -1,0 +1,78 @@
+{
+  "id": "chest_stretch",
+  "name": "Doorway chest stretch",
+  "primaryMuscle": "chest",
+  "equipment": [
+    "door"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Forearm on the door frame, step through.",
+  "steps": [
+    "Place the forearm on a door frame, elbow at shoulder height.",
+    "Step forward with the same-side leg.",
+    "Turn the chest away until you feel the stretch.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "chest_stretch-start.svg",
+      "alt": "Standing, arm held back at shoulder height on a door frame."
+    },
+    "end": {
+      "file": "chest_stretch-end.svg",
+      "alt": "Stepping forward, chest moving past the door frame."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        262,
+        355
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearElbow",
+          "offset": -3
+        }
+      ]
+    },
+    "end": {
+      "torso": 8,
+      "nearArm": [
+        250,
+        350
+      ],
+      "nearLeg": [
+        160,
+        188
+      ],
+      "farLeg": [
+        194,
+        190
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearElbow",
+          "offset": -3
+        }
+      ]
+    },
+    "arrows": [
+      "shoulder"
+    ],
+    "anchor": "nearElbow"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "glute_stretch",
+  "name": "Figure-4 glute stretch",
+  "primaryMuscle": "glutes",
+  "equipment": [
+    "none"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Lying figure-4 stretch.",
+  "steps": [
+    "Lie on your back with knees bent.",
+    "Cross one ankle over the opposite knee.",
+    "Pull the supporting thigh toward the chest.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "glute_stretch-start.svg",
+      "alt": "Lying on the back, ankle crossed over the other knee."
+    },
+    "end": {
+      "file": "glute_stretch-end.svg",
+      "alt": "Supporting thigh pulled toward the chest."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        262,
+        268
+      ],
+      "nearLeg": [
+        340,
+        70
+      ],
+      "farLeg": [
+        330,
+        186
+      ],
+      "farFoot": 270
+    },
+    "end": {
+      "torso": 90,
+      "head": 90,
+      "nearArm": [
+        330,
+        290
+      ],
+      "farArm": [
+        335,
+        285
+      ],
+      "nearLeg": [
+        15,
+        80
+      ],
+      "farLeg": [
+        10,
+        290
+      ]
+    },
+    "arrows": [
+      "farKnee"
+    ],
+    "anchor": "hip"
+  }
+}

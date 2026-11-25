@@ -1,0 +1,60 @@
+{
+  "id": "calf_raise",
+  "name": "Calf raise",
+  "primaryMuscle": "calves",
+  "equipment": [
+    "none"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "summary": "Two-leg calf raise on the floor.",
+  "steps": [
+    "Stand tall, feet hip-width.",
+    "Rise as high as possible on the toes.",
+    "Pause 1 s and lower slowly."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Bending the knees."
+  ],
+  "breathing": "Exhale up, inhale down.",
+  "cadence": {
+    "eccentricSec": 2,
+    "concentricSec": 1,
+    "pauseTopSec": 1
+  },
+  "ladder": [
+    "Two legs",
+    "Two legs, 3 s down",
+    "Single leg"
+  ],
+  "easier": "Hold a wall.",
+  "harder": "One leg or a step.",
+  "contraindications": [
+    "Achilles pain."
+  ],
+  "alternatives": [
+    "single_leg_calf_raise"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "calf_raise-start.svg",
+      "alt": "Standing flat-footed."
+    },
+    "end": {
+      "file": "calf_raise-end.svg",
+      "alt": "Standing high on the toes."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {},
+    "end": {
+      "nearFoot": 140
+    },
+    "arrows": [
+      "head"
+    ],
+    "anchor": "nearToe"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "single_leg_rdl",
+  "name": "Single-leg Romanian deadlift",
+  "primaryMuscle": "hamstrings",
+  "secondaryMuscles": [
+    "glutes",
+    "back"
+  ],
+  "equipment": [
+    "dumbbell",
+    "band"
+  ],
+  "category": "strength",
+  "mode": "reps",
+  "unilateral": true,
+  "summary": "Hip hinge on one leg; hips back, back straight.",
+  "steps": [
+    "Stand on one leg with a soft knee, dumbbell in the opposite hand.",
+    "Push the hips back and tilt the torso forward while the free leg goes back in line with the body.",
+    "Lower until you feel a stretch in the back of the thigh, back straight.",
+    "Drive the hips forward to stand up."
+  ],
+  "commonMistakes": [
+    "Rounding the back.",
+    "Opening the hips to the side.",
+    "Bending the standing knee a lot."
+  ],
+  "breathing": "Inhale while hinging, exhale while standing.",
+  "cadence": {
+    "eccentricSec": 3,
+    "concentricSec": 1
+  },
+  "ladder": [
+    "Two legs, dumbbell",
+    "Single leg, hand support",
+    "Single leg, dumbbell",
+    "Single leg, dumbbell + band",
+    "Single leg, 4 s down"
+  ],
+  "easier": "Touch a wall for balance or keep the rear toes on the floor.",
+  "harder": "Add a band under the foot or slow down.",
+  "contraindications": [
+    "Acute lower back pain."
+  ],
+  "alternatives": [
+    "romanian_deadlift"
+  ],
+  "illustrations": {
+    "start": {
+      "file": "single_leg_rdl-start.svg",
+      "alt": "Standing on one leg holding a dumbbell."
+    },
+    "end": {
+      "file": "single_leg_rdl-end.svg",
+      "alt": "Hinged forward on one leg, free leg extended back in line with the torso."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "farLeg": [
+        192,
+        196
+      ],
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "end": {
+      "torso": 80,
+      "head": 86,
+      "nearLeg": [
+        172,
+        186
+      ],
+      "farLeg": [
+        262,
+        262
+      ],
+      "farFoot": 180,
+      "props": [
+        {
+          "type": "dumbbell",
+          "at": "nearHand"
+        }
+      ]
+    },
+    "arrows": [
+      "shoulder"
+    ]
+  }
+}

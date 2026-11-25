@@ -1,0 +1,93 @@
+{
+  "id": "quad_stretch",
+  "name": "Standing quad stretch",
+  "primaryMuscle": "quads",
+  "equipment": [
+    "wall"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": true,
+  "summary": "Standing, heel toward the glute.",
+  "steps": [
+    "Stand next to a wall for balance.",
+    "Bend one knee and hold the ankle.",
+    "Bring the heel toward the glute, knees together, pelvis tucked.",
+    "Hold, then switch sides."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "quad_stretch-start.svg",
+      "alt": "Standing on one leg, holding the other ankle behind."
+    },
+    "end": {
+      "file": "quad_stretch-end.svg",
+      "alt": "Heel pulled to the glute, knees together."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "nearArm": [
+        200,
+        200
+      ],
+      "farArm": [
+        95,
+        95
+      ],
+      "nearLeg": [
+        172,
+        282
+      ],
+      "farLeg": [
+        180,
+        180
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "farHand",
+          "offset": 4
+        }
+      ]
+    },
+    "end": {
+      "nearArm": [
+        205,
+        192
+      ],
+      "farArm": [
+        95,
+        95
+      ],
+      "nearLeg": [
+        184,
+        350
+      ],
+      "farLeg": [
+        180,
+        180
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "farHand",
+          "offset": 4
+        }
+      ]
+    },
+    "arrows": [
+      "nearAnkle"
+    ],
+    "anchor": "farAnkle"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "lat_stretch",
+  "name": "Lat stretch",
+  "primaryMuscle": "back",
+  "equipment": [
+    "wall"
+  ],
+  "category": "mobility",
+  "mode": "hold",
+  "unilateral": false,
+  "summary": "Hands on a support, hips back.",
+  "steps": [
+    "Hands on a wall or table at hip height.",
+    "Walk back and push the hips back.",
+    "Let the chest sink between the arms.",
+    "Hold."
+  ],
+  "commonMistakes": [
+    "Bouncing.",
+    "Pushing into sharp pain."
+  ],
+  "breathing": "Breathe slowly; relax a little more on each exhale.",
+  "contraindications": [
+    "Stop on sharp pain."
+  ],
+  "illustrations": {
+    "start": {
+      "file": "lat_stretch-start.svg",
+      "alt": "Hands on a wall, torso leaning forward."
+    },
+    "end": {
+      "file": "lat_stretch-end.svg",
+      "alt": "Hips pushed back, chest sinking between straight arms."
+    },
+    "review": "pending"
+  },
+  "poses": {
+    "start": {
+      "torso": 45,
+      "head": 55,
+      "nearArm": [
+        70,
+        70
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 4
+        }
+      ]
+    },
+    "end": {
+      "torso": 88,
+      "head": 100,
+      "nearArm": [
+        92,
+        92
+      ],
+      "nearLeg": [
+        188,
+        180
+      ],
+      "props": [
+        {
+          "type": "wall",
+          "at": "nearHand",
+          "offset": 4
+        }
+      ]
+    },
+    "arrows": [
+      "shoulder"
+    ],
+    "anchor": "nearHand"
+  }
+}

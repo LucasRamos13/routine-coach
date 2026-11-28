@@ -49,24 +49,38 @@ def load_config(path: str | None) -> dict:
                 if line and not line.startswith("#") and "=" in line:
                     k, v = line.split("=", 1)
                     cfg[k.strip()] = v.strip().strip('"')
-    for k in ("RC_NTFY_SERVER", "RC_NTFY_TOPIC", "RC_TELEGRAM_TOKEN", "RC_TELEGRAM_CHAT_ID"):
+    for k in ("RC_NTFY_SERVER", "RC_NTFY_TOPIC", "RC_NTFY_TOKEN", "RC_TELEGRAM_TOKEN", "RC_TELEGRAM_CHAT_ID"):
         if os.environ.get(k):
             cfg[k] = os.environ[k]
     cfg.setdefault("RC_NTFY_SERVER", "https://ntfy.sh")
     if not cfg.get("RC_NTFY_TOPIC"):
         sys.exit("RC_NTFY_TOPIC is not set")
+    if not is_strong_topic(cfg["RC_NTFY_TOPIC"]):
+        sys.exit(f"RC_NTFY_TOPIC must be at least {MIN_TOPIC_LENGTH} random characters (A-Z, a-z, 0-9, - or _): "
+                 "on public ntfy the topic name is the only secret. Use the one generated in the app.")
     return cfg
 
 
+MIN_TOPIC_LENGTH = 24
+
+
+def is_strong_topic(topic: str) -> bool:
+    """Same rule as Relay.isStrongTopic in the app."""
+    return len(topic) >= MIN_TOPIC_LENGTH and re.fullmatch(r"[A-Za-z0-9_-]+", topic) is not None
+
+
 class Ntfy:
-    def __init__(self, server: str, topic: str):
+    def __init__(self, server: str, topic: str, token: str = ""):
         self.base = server.rstrip("/")
         self.topic = topic
         self.ack_topic = topic + "-ack"
+        self.headers = {"User-Agent": USER_AGENT}
+        if token:
+            self.headers["Authorization"] = f"Bearer {token}"
 
     def publish_ack(self, reminder_id: str, kind: str, channel: str) -> None:
         req = urllib.request.Request(f"{self.base}/{self.ack_topic}", data=f"ack:{reminder_id}:{kind}:{channel}".encode(),
-                                     method="POST", headers={"User-Agent": USER_AGENT})
+                                     method="POST", headers=self.headers)
         urllib.request.urlopen(req, timeout=15).read()
 
     def stream(self, on_message, since: str = "10m") -> None:
@@ -76,7 +90,7 @@ class Ntfy:
         while True:
             url = f"{self.base}/{self.topic},{self.ack_topic}/json?since={urllib.parse.quote(str(last))}"
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+                req = urllib.request.Request(url, headers=self.headers)
                 with urllib.request.urlopen(req, timeout=90) as resp:
                     delay = 2
                     for raw in resp:
@@ -238,7 +252,7 @@ def main() -> None:
     ap.add_argument("command", choices=["desktop", "telegram"])
     args = ap.parse_args()
     cfg = load_config(args.config)
-    ntfy = Ntfy(cfg["RC_NTFY_SERVER"], cfg["RC_NTFY_TOPIC"])
+    ntfy = Ntfy(cfg["RC_NTFY_SERVER"], cfg["RC_NTFY_TOPIC"], cfg.get("RC_NTFY_TOKEN", ""))
     if args.command == "desktop":
         print(f"Listening for reminders on {ntfy.base}/<topic> ({platform.system()})")
         ntfy.stream(Desktop(ntfy).on_message)

@@ -41,7 +41,7 @@ class RelayWorker(context: Context, params: WorkerParameters) : CoroutineWorker(
     override suspend fun doWork(): Result {
         val s = applicationContext.container.settings.get()
         if (!s.relayEnabled) return Result.success()
-        val relay = Relay(s.relayServer, s.relayTopic)
+        val relay = Relay(s.relayServer, s.relayTopic, s.relayToken)
         val id = inputData.getLong("id", -1)
         val arg = inputData.getString("arg").orEmpty()
         return try {
@@ -82,7 +82,7 @@ class AckPollWorker(context: Context, params: WorkerParameters) : CoroutineWorke
         }
         return try {
             val now = System.currentTimeMillis() / 1000
-            val acks = Relay(s.relayServer, s.relayTopic).pollAcks(s.lastAckPoll)
+            val acks = Relay(s.relayServer, s.relayTopic, s.relayToken).pollAcks(s.lastAckPoll)
             for (a in acks.sortedBy { it.time }) {
                 if (a.channel != "phone") c.reminders.acknowledge(a.reminderId, a.kind, a.channel)
             }

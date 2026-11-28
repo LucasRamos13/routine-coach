@@ -151,17 +151,26 @@ fun SettingsScreen(nav: NavController, s: AppSettings) {
         item {
             var server by remember { mutableStateOf(s.relayServer) }
             var topic by remember { mutableStateOf(s.relayTopic) }
+            var token by remember { mutableStateOf(s.relayToken) }
+            val topicOk = topic.isEmpty() || Relay.isStrongTopic(topic)
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text("If a phone reminder is not acknowledged in time, it is relayed to this ntfy topic. The PC notifier and the Telegram bridge " +
-                    "listen to it. Use a long random topic name: anyone who knows it can read the reminders (they contain only a time).",
+                    "listen to it. On the public ntfy.sh server the topic name works as a password: anyone who knows it can read and " +
+                    "publish reminders (they contain only a time). Use \"Generate\" for a random topic, or a private server with an access token.",
                     style = MaterialTheme.typography.bodySmall)
                 OutlinedTextField(server, { server = it.trim() }, label = { Text("Server") }, singleLine = true, modifier = Modifier.fillMaxWidth())
-                OutlinedTextField(topic, { topic = it.trim() }, label = { Text("Topic (empty = off)") }, singleLine = true, modifier = Modifier.fillMaxWidth())
+                OutlinedTextField(topic, { topic = it.trim() }, label = { Text("Topic (empty = off)") }, singleLine = true,
+                    isError = !topicOk,
+                    supportingText = if (topicOk) null else ({ Text("At least ${Relay.MIN_TOPIC_LENGTH} characters: letters, digits, - or _") }),
+                    modifier = Modifier.fillMaxWidth())
+                OutlinedTextField(token, { token = it.trim() }, label = { Text("Access token (optional, private servers)") }, singleLine = true,
+                    visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(), modifier = Modifier.fillMaxWidth())
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = { update({ it.copy(relayServer = server, relayTopic = topic) }) }) { Text("Save") }
-                    OutlinedButton(enabled = topic.isNotBlank(), onClick = {
+                    OutlinedButton(onClick = { topic = Relay.randomTopic() }) { Text("Generate") }
+                    OutlinedButton(enabled = topicOk, onClick = { update({ it.copy(relayServer = server, relayTopic = topic, relayToken = token) }) }) { Text("Save") }
+                    OutlinedButton(enabled = topic.isNotEmpty() && topicOk, onClick = {
                         scope.launch {
-                            message = runCatching { withContext(Dispatchers.IO) { Relay(server, topic).publishReminder(0, "now (test)") }; "Test reminder sent." }
+                            message = runCatching { withContext(Dispatchers.IO) { Relay(server, topic, token).publishReminder(0, "now (test)") }; "Test reminder sent." }
                                 .getOrElse { "Relay test failed: ${it.message}" }
                         }
                     }) { Text("Send test") }

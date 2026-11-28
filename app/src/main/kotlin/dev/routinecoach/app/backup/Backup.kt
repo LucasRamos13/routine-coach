@@ -98,7 +98,8 @@ class BackupManager(private val db: AppDatabase) {
     }
 
     // ------------------------------------------------------------------------------------------
-    // Encrypted backup: "RCBK1" + salt(16) + iv(12) + AES-256-GCM(JSON). Key = PBKDF2-HMAC-SHA256(password).
+    // Encrypted backup. See BackupCrypto for the on-disk format (KDF parameters are stored in the
+    // file header, so raising the cost later never breaks restoring older backups).
     // ------------------------------------------------------------------------------------------
 
     suspend fun exportEncrypted(out: OutputStream, password: CharArray) {
@@ -123,37 +124,92 @@ class BackupManager(private val db: AppDatabase) {
     }
 }
 
+/**
+ * Password-based encryption for backups.
+ *
+ * Format v2 (current):
+ *   "RCBK2" | kdfId(1) | iterations(4, big-endian) | salt(16) | iv(12) | AES-256-GCM(JSON, 128-bit tag)
+ * The whole header (everything before the ciphertext) is authenticated as GCM associated data, so the
+ * stored KDF parameters cannot be tampered with without failing decryption.
+ *
+ * Format v1 (legacy, read-only): "RCBK1" | salt(16) | iv(12) | ciphertext, PBKDF2 with 120 000 iterations.
+ *
+ * KDF: PBKDF2-HMAC-SHA256 at 600 000 iterations, OWASP's current recommendation for PBKDF2-SHA256.
+ * Argon2id would be preferable but has no platform implementation on Android; the kdfId byte leaves room to
+ * switch to it later without another format change.
+ */
 object BackupCrypto {
-    private val MAGIC = "RCBK1".toByteArray()
-    private const val ITERATIONS = 120_000
+    private val MAGIC_V1 = "RCBK1".toByteArray()
+    private val MAGIC_V2 = "RCBK2".toByteArray()
+    private const val KDF_PBKDF2_SHA256: Byte = 1
+    const val ITERATIONS = 600_000
+    private const val LEGACY_ITERATIONS = 120_000
+    /** Upper bound accepted when reading, so a crafted file cannot make restore hang. */
+    private const val MAX_ITERATIONS = 10_000_000
+    private const val SALT_LEN = 16
+    private const val IV_LEN = 12
+    private const val TAG_BITS = 128
 
-    private fun key(password: CharArray, salt: ByteArray): SecretKeySpec {
-        val f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
-        return SecretKeySpec(f.generateSecret(PBEKeySpec(password, salt, ITERATIONS, 256)).encoded, "AES")
+    private fun key(password: CharArray, salt: ByteArray, iterations: Int): SecretKeySpec {
+        val spec = PBEKeySpec(password, salt, iterations, 256)
+        try {
+            val f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
+            return SecretKeySpec(f.generateSecret(spec).encoded, "AES")
+        } finally {
+            spec.clearPassword()
+        }
     }
 
-    fun encrypt(plain: ByteArray, password: CharArray): ByteArray {
+    fun encrypt(plain: ByteArray, password: CharArray, iterations: Int = ITERATIONS): ByteArray {
         val rnd = SecureRandom()
-        val salt = ByteArray(16).also(rnd::nextBytes)
-        val iv = ByteArray(12).also(rnd::nextBytes)
+        val salt = ByteArray(SALT_LEN).also(rnd::nextBytes)
+        val iv = ByteArray(IV_LEN).also(rnd::nextBytes)
+        val header = java.nio.ByteBuffer.allocate(MAGIC_V2.size + 1 + 4 + SALT_LEN + IV_LEN)
+            .put(MAGIC_V2).put(KDF_PBKDF2_SHA256).putInt(iterations).put(salt).put(iv).array()
         val c = Cipher.getInstance("AES/GCM/NoPadding")
-        c.init(Cipher.ENCRYPT_MODE, key(password, salt), GCMParameterSpec(128, iv))
-        val out = ByteArrayOutputStream()
-        out.write(MAGIC); out.write(salt); out.write(iv); out.write(c.doFinal(plain))
-        return out.toByteArray()
+        c.init(Cipher.ENCRYPT_MODE, key(password, salt, iterations), GCMParameterSpec(TAG_BITS, iv))
+        c.updateAAD(header)
+        return header + c.doFinal(plain)
     }
 
     fun decrypt(data: ByteArray, password: CharArray): ByteArray {
-        require(data.size > MAGIC.size + 28 && data.copyOfRange(0, MAGIC.size).contentEquals(MAGIC)) { "Not a Routine Coach backup" }
-        var p = MAGIC.size
-        val salt = data.copyOfRange(p, p + 16); p += 16
-        val iv = data.copyOfRange(p, p + 12); p += 12
-        val c = Cipher.getInstance("AES/GCM/NoPadding")
-        c.init(Cipher.DECRYPT_MODE, key(password, salt), GCMParameterSpec(128, iv))
-        return try {
-            c.doFinal(data, p, data.size - p)
-        } catch (e: javax.crypto.AEADBadTagException) {
-            throw IllegalArgumentException("Wrong password or damaged file")
+        val magic = if (data.size >= MAGIC_V2.size) data.copyOfRange(0, MAGIC_V2.size) else ByteArray(0)
+        return when {
+            magic.contentEquals(MAGIC_V2) -> decryptV2(data, password)
+            magic.contentEquals(MAGIC_V1) -> decryptV1(data, password)
+            else -> throw IllegalArgumentException("Not a Routine Coach backup")
         }
+    }
+
+    private fun decryptV2(data: ByteArray, password: CharArray): ByteArray {
+        val headerLen = MAGIC_V2.size + 1 + 4 + SALT_LEN + IV_LEN
+        require(data.size > headerLen + TAG_BITS / 8) { "Not a Routine Coach backup" }
+        val buf = java.nio.ByteBuffer.wrap(data, MAGIC_V2.size, headerLen - MAGIC_V2.size)
+        val kdf = buf.get()
+        val iterations = buf.int
+        require(kdf == KDF_PBKDF2_SHA256) { "Unsupported backup key derivation ($kdf); update the app" }
+        require(iterations in 1..MAX_ITERATIONS) { "Wrong password or damaged file" }
+        val salt = ByteArray(SALT_LEN).also { buf.get(it) }
+        val iv = ByteArray(IV_LEN).also { buf.get(it) }
+        val c = Cipher.getInstance("AES/GCM/NoPadding")
+        c.init(Cipher.DECRYPT_MODE, key(password, salt, iterations), GCMParameterSpec(TAG_BITS, iv))
+        c.updateAAD(data, 0, headerLen)
+        return finish(c, data, headerLen)
+    }
+
+    private fun decryptV1(data: ByteArray, password: CharArray): ByteArray {
+        require(data.size > MAGIC_V1.size + SALT_LEN + IV_LEN) { "Not a Routine Coach backup" }
+        var p = MAGIC_V1.size
+        val salt = data.copyOfRange(p, p + SALT_LEN); p += SALT_LEN
+        val iv = data.copyOfRange(p, p + IV_LEN); p += IV_LEN
+        val c = Cipher.getInstance("AES/GCM/NoPadding")
+        c.init(Cipher.DECRYPT_MODE, key(password, salt, LEGACY_ITERATIONS), GCMParameterSpec(TAG_BITS, iv))
+        return finish(c, data, p)
+    }
+
+    private fun finish(c: Cipher, data: ByteArray, offset: Int): ByteArray = try {
+        c.doFinal(data, offset, data.size - offset)
+    } catch (e: javax.crypto.AEADBadTagException) {
+        throw IllegalArgumentException("Wrong password or damaged file")
     }
 }

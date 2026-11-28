@@ -1,5 +1,6 @@
 package dev.routinecoach.app.data
 
+import dev.routinecoach.app.reminders.Relay
 import kotlinx.serialization.builtins.serializer
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
@@ -32,12 +33,15 @@ data class AppSettings(
     val snoozeMin: Int = 15,
     val relayServer: String = "https://ntfy.sh",
     val relayTopic: String = "",
+    /** Optional ntfy access token for servers with access control. */
+    val relayToken: String = "",
     val fontScale: Float = 1.0f,
     val highContrast: Boolean = false,
     val lastProcessedDay: LocalDate? = null,
     val lastAckPoll: Long = 0,
 ) {
-    val relayEnabled: Boolean get() = relayTopic.isNotBlank()
+    /** A weak (short or guessable) topic keeps the relay off: on public ntfy the topic name is the only secret. */
+    val relayEnabled: Boolean get() = Relay.isStrongTopic(relayTopic)
 }
 
 class SettingsStore(private val context: Context) {
@@ -54,6 +58,7 @@ class SettingsStore(private val context: Context) {
         val snooze = intPreferencesKey("snooze")
         val relayServer = stringPreferencesKey("relayServer")
         val relayTopic = stringPreferencesKey("relayTopic")
+        val relayToken = stringPreferencesKey("relayToken")
         val fontScale = floatPreferencesKey("fontScale")
         val contrast = booleanPreferencesKey("highContrast")
         val lastDay = stringPreferencesKey("lastProcessedDay")
@@ -79,6 +84,7 @@ class SettingsStore(private val context: Context) {
         snoozeMin = this[K.snooze] ?: 15,
         relayServer = this[K.relayServer] ?: "https://ntfy.sh",
         relayTopic = this[K.relayTopic] ?: "",
+        relayToken = this[K.relayToken] ?: "",
         fontScale = this[K.fontScale] ?: 1.0f,
         highContrast = this[K.contrast] ?: false,
         lastProcessedDay = this[K.lastDay]?.let(LocalDate::parse),
@@ -100,6 +106,7 @@ class SettingsStore(private val context: Context) {
             p[K.snooze] = s.snoozeMin
             p[K.relayServer] = s.relayServer
             p[K.relayTopic] = s.relayTopic
+            p[K.relayToken] = s.relayToken
             p[K.fontScale] = s.fontScale
             p[K.contrast] = s.highContrast
             s.lastProcessedDay?.let { p[K.lastDay] = it.toString() } ?: p.remove(K.lastDay)

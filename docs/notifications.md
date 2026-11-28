@@ -12,12 +12,16 @@
 - **Volume**: quiet hours, a daily limit and snooze length are configurable.
 - **Offline**: phone reminders are local and work in airplane mode. Relay messages are queued by WorkManager and sent
   when the network is back; ntfy keeps messages so the PC and bot receive them when they reconnect.
-- **Privacy**: relay messages contain only "Training session at HH:MM" — no health data. Use a long random topic, or
-  a self-hosted ntfy server with access control.
+- **Privacy**: relay messages contain only "Training session at HH:MM" and the reminder id — never health data or
+  anything personal. On the public `ntfy.sh` server **topics are open: the topic name works as a password**, and anyone
+  who knows it can read and publish to `<topic>` and `<topic>-ack`. So the app and the companion refuse topics shorter
+  than 24 characters, and "Generate" creates a random 160-bit one. For stronger isolation use a self-hosted ntfy server
+  with access control and set the access token (sent as `Authorization: Bearer`).
 
 ## Phone
 
-Settings › Bot and PC relay: server (default `https://ntfy.sh`) and topic. "Send test" publishes a test reminder.
+Settings › Bot and PC relay: server (default `https://ntfy.sh`), topic ("Generate" creates a random one; treat it as a
+secret) and an optional access token for private servers. "Send test" publishes a test reminder.
 Allow notifications and exact alarms, and exempt the app from battery optimization (Settings › Permissions); the app
 warns when reminders cannot fire exactly.
 

@@ -1,6 +1,6 @@
 import unittest
 
-from routine_coach_companion import parse
+from routine_coach_companion import is_strong_topic, parse
 
 
 class ParseTest(unittest.TestCase):
@@ -15,6 +15,16 @@ class ParseTest(unittest.TestCase):
     def test_ignores_foreign_messages(self):
         self.assertIsNone(parse({"topic": "t", "message": "hello", "tags": []}, "t-ack"))
         self.assertIsNone(parse({"topic": "t-ack", "message": "rm -rf"}, "t-ack"))
+
+
+class TopicTest(unittest.TestCase):
+    def test_rejects_short_or_invalid_topics(self):
+        self.assertFalse(is_strong_topic("treino"))
+        self.assertFalse(is_strong_topic("a" * 23))
+        self.assertFalse(is_strong_topic("rc-" + "a" * 30 + "/x"))
+
+    def test_accepts_generated_topic(self):
+        self.assertTrue(is_strong_topic("rc-abcdefghijklmnopqrstuvwxyz234567"))
 
 
 if __name__ == "__main__":
